@@ -46,7 +46,7 @@ jobs:
 
             - name: build project
               run: |                                   
-                jf pip install -r requirements.txt    
+                jf pip install -r requirements.txt --break-system-packages
                 jf pip install -e lollms_core           
                 cat > global_paths_cfg.yaml << EOL
                       lollms_path: $(pwd)/lollms_core/lollms
