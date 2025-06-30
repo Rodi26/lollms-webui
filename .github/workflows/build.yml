@@ -40,7 +40,7 @@ jobs:
             - name: build project
               run: |                                   
                 jf pip install -r requirements.txt
-                jf pip install -e lollms_core           
+     
  
             - name: publish build info
               run: |
