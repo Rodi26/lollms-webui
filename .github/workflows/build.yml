@@ -1,4 +1,4 @@
-name: build-publish-scan
+name: build-lollms-webui
 on:
     push:
         branches:
@@ -21,8 +21,8 @@ jobs:
             - name: Setup JFrog CLI
               uses: jfrog/setup-jfrog-cli@v4
               id: setup-cli
-              # env:
-                # JF_PROJECT: sai
+              env:
+              JF_PROJECT: sai
               with:
                   oidc-provider-name: rodolphef-lollms-webui
                   oidc-audience: rodolphef-lollms-webui-audience
@@ -35,14 +35,6 @@ jobs:
               run: |
                 # Use a curated repository for python dependencies resolution
                 jf pip-config --repo-resolve=soleng-pypi-dev-virtual   
-
-            - name: configure environment
-              run: |    
-                pip install --upgrade pip     
-                python3 -m pip install --upgrade pip setuptools wheel sigstore
-                wheel -h
-                pip show setuptools
-                echo $VIRTUAL_ENV
 
             - name: build project
               run: |                                   
