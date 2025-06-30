@@ -22,8 +22,7 @@ jobs:
               uses: jfrog/setup-jfrog-cli@v4
               id: setup-cli
               env:
-                JF_URL: https://rodolphefplus.jfrog.io/
-                JF_PROJECT: sai
+                # JF_PROJECT: sai
               with:
                   oidc-provider-name: rodolphef-lollms-webui
                   oidc-audience: rodolphef-lollms-webui-mapping
