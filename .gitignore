@@ -225,7 +225,6 @@ lollms_env\
 *.sqlite3
 *.sqlite
 *-shm
-.github/build.yml
 terraform/terraform copy.tfvars
 terraform/terraform.tfvars
 terraform/terraform.tfstate.backup
