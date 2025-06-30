@@ -1,7 +1,5 @@
 colorama
-numpy==1.26.4
 pandas
-Pillow>=9.5.0
 pyyaml
 requests
 rich
@@ -15,7 +13,8 @@ GitPython
 ascii-colors>=0.4.2
 beautifulsoup4
 packaging
-
+numpy==1.26.*
+Pillow>=9.5.0
 fastapi
 uvicorn
 python-multipart
