@@ -26,6 +26,7 @@ jobs:
                 JF_PROJECT: sai
               with:
                   oidc-provider-name: rodolphef-lollms-webui
+                  oidc-audience: rodolphef-lollms-webui-mapping
 
             - name: Checkout the repository
               uses: actions/checkout@v4
