@@ -46,7 +46,7 @@ jobs:
 
             - name: Docker push with JFrog CLI
               run: |
-                jf docker-push ${{ vars.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} ${{ env.DOCKER_REPO }} \
+                jf docker push ${{ vars.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} ${{ env.DOCKER_REPO }} \
                   --build-name=lollms-webui \
                   --build-number=${{ github.run_number }} 
  
