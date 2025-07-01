@@ -47,7 +47,7 @@ jobs:
             - name: Docker push with JFrog CLI
               run: |
                 jf docker push ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}  \
-                  --build-name=lollms-webui \
+                  --build-name=lbuild-lollms-webui \
                   --build-number=${{ github.run_number }} 
 
             - name: publish build info
@@ -59,7 +59,7 @@ jobs:
 
             - name: build scan
               run: |            
-                 jf build-scan lollms-webui ${{ github.run_number }}
+                 jf build-scan build-lollms-webui ${{ github.run_number }}
                 
             - name: Write to workflow job summary
               run: |
