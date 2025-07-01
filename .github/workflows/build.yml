@@ -49,8 +49,7 @@ jobs:
                 jf docker push ${{ vars.JF_URL }}/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}  \
                   --build-name=lollms-webui \
                   --build-number=${{ github.run_number }} 
-                  --project=sai
- 
+
             - name: publish build info
               run: |
                 jf rt build-collect-env 
