@@ -42,11 +42,11 @@ jobs:
                 jf pip install -r requirements.txt
             - name: Docker build
               run: |
-                docker build -t ${{ env.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} .
+                docker build -t ${{ vars.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} .
 
             - name: Docker push with JFrog CLI
               run: |
-                jf docker-push ${{ env.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} ${{ env.DOCKER_REPO }} \
+                jf docker-push ${{ vars.JF_URL }}${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }} ${{ env.DOCKER_REPO }} \
                   --build-name=lollms-webui \
                   --build-number=${{ github.run_number }} 
  
